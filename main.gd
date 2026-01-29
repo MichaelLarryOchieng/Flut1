@@ -11,4 +11,13 @@ if n == 6:
 		print("n is equal to six")
 	else:
 		print("n is not equal to six")
+if n == 6:
+		print("n is equal to six")
+	else:
+		if n < 6:
+			print("n is less than six")
+		else:
+			print("n is greater than six")
+	
+	n = 8
 print("age");
