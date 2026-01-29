@@ -7,4 +7,8 @@ n = 4
 	# Regular 'if' statement 
 	if n == 4:
 		print("n is equal to four")
+if n == 6:
+		print("n is equal to six")
+	else:
+		print("n is not equal to six")
 print("age");
