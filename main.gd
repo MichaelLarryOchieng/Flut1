@@ -46,3 +46,13 @@ func _process(delta):
 		move_timer = 0
 		move_snake()
 		queue_redraw()
+
+func handle_input():
+	if Input.is_action_pressed("ui_up") and direction != DOWN:
+		direction = UP
+	elif Input.is_action_pressed("ui_down") and direction != UP:
+		direction = DOWN
+	elif Input.is_action_pressed("ui_left") and direction != RIGHT:
+		direction = LEFT
+	elif Input.is_action_pressed("ui_right") and direction != LEFT:
+		direction = RIGHT
