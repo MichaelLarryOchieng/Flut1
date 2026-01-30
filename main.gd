@@ -16,3 +16,7 @@ var snake := []
 var food := Vector2.ZERO
 var move_timer := 0.0
 var move_delay := 0.15
+
+
+func _ready():
+	start_game()
