@@ -37,3 +37,12 @@ func spawn_food():
 		)
 		if food not in snake:
 			break
+
+func _process(delta):
+	handle_input()
+
+	move_timer += delta
+	if move_timer >= move_delay:
+		move_timer = 0
+		move_snake()
+		queue_redraw()
