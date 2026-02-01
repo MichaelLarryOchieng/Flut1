@@ -59,3 +59,8 @@ func handle_input():
 
 func move_snake():
 	var new_head = snake[0] + direction
+
+# Wall collision
+	if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIGHT:
+		start_game()
+		return
