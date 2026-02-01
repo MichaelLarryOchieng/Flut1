@@ -68,3 +68,10 @@ func move_snake():
 	if new_head in snake:
 		start_game()
 		return
+snake.insert(0, new_head)
+
+	# Eat food
+	if new_head == food:
+		spawn_food()
+	else:
+		snake.pop_back()
