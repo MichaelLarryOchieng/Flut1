@@ -56,3 +56,6 @@ func handle_input():
 		direction = LEFT
 	elif Input.is_action_pressed("ui_right") and direction != LEFT:
 		direction = RIGHT
+
+func move_snake():
+	var new_head = snake[0] + direction
