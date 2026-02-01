@@ -64,3 +64,7 @@ func move_snake():
 	if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIGHT:
 		start_game()
 		return
+# Self collision
+	if new_head in snake:
+		start_game()
+		return
