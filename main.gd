@@ -75,3 +75,11 @@ snake.insert(0, new_head)
 		spawn_food()
 	else:
 		snake.pop_back()
+
+func _draw():
+	# Draw snake
+	for part in snake:
+		draw_rect(
+			Rect2(part * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)),
+			Color.GREEN
+		)
