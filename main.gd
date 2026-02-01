@@ -83,3 +83,8 @@ func _draw():
 			Rect2(part * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)),
 			Color.GREEN
 		)
+	# Draw food
+	draw_rect(
+		Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)),
+		Color.RED
+	)
