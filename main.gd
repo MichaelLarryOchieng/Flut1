@@ -105,3 +105,6 @@ func _input(event):
 func handle_swipe():
 	var swipe = touch_end - touch_start
 
+	if swipe.length() < min_swipe_distance:
+		return
+
