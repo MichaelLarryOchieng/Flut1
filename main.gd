@@ -113,4 +113,10 @@ if abs(swipe.x) > abs(swipe.y):
 			direction = RIGHT
 elif swipe.x < 0 and direction != RIGHT:
 			direction = LEFT
+else:
+		# Vertical swipe
+		if swipe.y > 0 and direction != UP:
+			direction = DOWN
+		elif swipe.y < 0 and direction != DOWN:
+			direction = UP
 
