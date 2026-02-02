@@ -102,3 +102,6 @@ func _input(event):
 			touch_end = event.position
 			handle_swipe()
 
+func handle_swipe():
+	var swipe = touch_end - touch_start
+
