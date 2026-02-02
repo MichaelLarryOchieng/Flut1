@@ -107,4 +107,8 @@ func handle_swipe():
 
 	if swipe.length() < min_swipe_distance:
 		return
+if abs(swipe.x) > abs(swipe.y):
+		# Horizontal swipe
+		if swipe.x > 0 and direction != LEFT:
+			direction = RIGHT
 
