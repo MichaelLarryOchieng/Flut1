@@ -93,3 +93,12 @@ func _draw():
 		Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)),
 		Color.RED
 	)
+
+func _input(event):
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			touch_start = event.position
+		else:
+			touch_end = event.position
+			handle_swipe()
+
