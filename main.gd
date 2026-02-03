@@ -121,4 +121,4 @@ else:
 			direction = UP
 func _process(delta):
 	handle_input() # keyboard still works
-
+move_timer += delta
