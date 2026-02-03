@@ -119,4 +119,6 @@ else:
 			direction = DOWN
 		elif swipe.y < 0 and direction != DOWN:
 			direction = UP
+func _process(delta):
+	handle_input() # keyboard still works
 
