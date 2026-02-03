@@ -122,3 +122,6 @@ else:
 func _process(delta):
 	handle_input() # keyboard still works
 move_timer += delta
+if move_timer >= move_delay:
+		move_timer = 0
+		move_snake()
