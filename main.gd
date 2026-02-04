@@ -26,6 +26,8 @@ var min_swipe_distance := 30
 func _ready():
 	start_game()
 if not OS.has_feature("mobile"):
+$CanvasLayer/MobileControls.visible = false
+
 
 func start_game():
 	snake.clear()
