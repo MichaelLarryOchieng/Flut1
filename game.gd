@@ -7,3 +7,6 @@ func _on_down_button_pressed():
 func _on_left_button_pressed():
 	if direction != RIGHT:
 		direction = LEFT
+func _on_right_button_pressed():
+	if direction != LEFT:
+		direction = RIGHT
