@@ -10,3 +10,4 @@ func _on_left_button_pressed():
 func _on_right_button_pressed():
 	if direction != LEFT:
 		direction = RIGHT
+Input.vibrate_handheld(duration_ms)
