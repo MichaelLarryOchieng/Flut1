@@ -11,3 +11,7 @@ func _on_right_button_pressed():
 	if direction != LEFT:
 		direction = RIGHT
 Input.vibrate_handheld(duration_ms)
+func vibrate(ms := 30):
+	if OS.has_feature("mobile"):
+		Input.vibrate_handheld(ms)
+
