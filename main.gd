@@ -134,3 +134,8 @@ if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIG
 	vibrate(80)
 	start_game()
 	return
+# Self collision
+if new_head in snake:
+	vibrate(80)
+	start_game()
+	return
