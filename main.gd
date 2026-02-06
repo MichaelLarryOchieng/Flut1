@@ -129,3 +129,8 @@ if move_timer >= move_delay:
 		move_timer = 0
 		move_snake()
 queue_redraw()
+# Wall collision
+if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIGHT:
+	vibrate(80)
+	start_game()
+	return
