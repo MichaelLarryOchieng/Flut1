@@ -6,4 +6,5 @@ func vibrate(ms := 30):
 		Input.vibrate_handheld(ms)
 
 VibrationToggle
+Checked = vibration ON
 
