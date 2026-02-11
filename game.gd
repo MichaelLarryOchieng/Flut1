@@ -20,6 +20,9 @@ func start_game():
 	snake.clear()
 	snake.append(Vector2(10, 12))
 	snake.append(Vector2(9, 12))
+    snake.append(Vector2(8, 12))
+	direction = RIGHT
+	spawn_food()
 	
 	
 
