@@ -1,3 +1,8 @@
+var score := 0
+var combo_count := 0
+var combo_timer := 0.0
+var combo_window := 2.0 # seconds allowed between foods
+
 func _on_up_button_pressed():
 	if direction != DOWN:
 		direction = UP
