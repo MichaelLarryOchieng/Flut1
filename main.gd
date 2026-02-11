@@ -78,11 +78,15 @@ func move_snake():
 		return
 snake.insert(0, new_head)
 
-	# Eat food
 	if new_head == food:
-		spawn_food()
-	else:
-		snake.pop_back()
+	spawn_food()
+
+	# Stronger feedback for reward
+	vibrate(45)
+
+else:
+	snake.pop_back()
+
 
 func _draw():
 	# Draw snake
