@@ -78,11 +78,12 @@ func move_snake():
 		return
 snake.insert(0, new_head)
 
+#Progressive feedback
 	if new_head == food:
 	spawn_food()
 
-	# Stronger feedback for reward
-	vibrate(45)
+	
+	var intensity = clamp(30 + snake.size(), 30, 60)
 
 else:
 	snake.pop_back()
