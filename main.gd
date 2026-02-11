@@ -81,10 +81,9 @@ snake.insert(0, new_head)
 #Progressive feedback
 	if new_head == food:
 	spawn_food()
-
 	
 	var intensity = clamp(30 + snake.size(), 30, 60)
-
+vibrate(intensity)
 else:
 	snake.pop_back()
 
