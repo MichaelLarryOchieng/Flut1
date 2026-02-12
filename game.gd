@@ -33,6 +33,7 @@ if move_timer >= move_delay:
 
 func move_snake():
 	var new_head = snake[0] + direction
+if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIGHT:
 
 	
 	
