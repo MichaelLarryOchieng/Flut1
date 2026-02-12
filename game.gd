@@ -31,6 +31,9 @@ if move_timer >= move_delay:
 		move_snake()
 		queue_redraw()
 
+func move_snake():
+	var new_head = snake[0] + direction
+
 	
 	
 
