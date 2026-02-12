@@ -26,6 +26,11 @@ func start_game():
 
 func _process(delta):
 	move_timer += delta
+if move_timer >= move_delay:
+		move_timer = 0
+		move_snake()
+		queue_redraw()
+
 	
 	
 
