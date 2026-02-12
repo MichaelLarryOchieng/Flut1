@@ -23,6 +23,9 @@ func start_game():
     snake.append(Vector2(8, 12))
 	direction = RIGHT
 	spawn_food()
+
+func _process(delta):
+	move_timer += delta
 	
 	
 
