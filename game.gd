@@ -46,6 +46,9 @@ func spawn_food():
 		food = Vector2(randi() % WIDTH, randi() % HEIGHT)
 if food not in snake:
 			break
+func _draw():
+	for part in snake:
+		draw_rect(Rect2(part * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.GREEN)
 
 	
 	
