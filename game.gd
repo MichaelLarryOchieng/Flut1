@@ -49,6 +49,8 @@ if food not in snake:
 func _draw():
 	for part in snake:
 		draw_rect(Rect2(part * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.GREEN)
+draw_rect(Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.RED)
+
 
 	
 	
