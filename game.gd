@@ -51,6 +51,10 @@ func _draw():
 		draw_rect(Rect2(part * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.GREEN)
 draw_rect(Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.RED)
 
+func vibrate(ms := 30):
+	if OS.has_feature("mobile"):
+		Input.vibrate_handheld(ms)
+
 
 	
 	
