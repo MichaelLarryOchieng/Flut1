@@ -44,6 +44,8 @@ if new_head in snake:
 func spawn_food():
 	while true:
 		food = Vector2(randi() % WIDTH, randi() % HEIGHT)
+if food not in snake:
+			break
 
 	
 	
