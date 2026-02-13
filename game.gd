@@ -41,6 +41,10 @@ if new_head in snake:
 		start_game()
 		return
 
+func spawn_food():
+	while true:
+		food = Vector2(randi() % WIDTH, randi() % HEIGHT)
+
 	
 	
 
