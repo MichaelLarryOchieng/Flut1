@@ -54,6 +54,17 @@ draw_rect(Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.RED)
 func vibrate(ms := 30):
 	if OS.has_feature("mobile"):
 		Input.vibrate_handheld(ms)
+# --- BUTTON CONTROLS ---
+
+func _on_up_button_pressed():
+	if direction != DOWN:
+		direction = UP
+		vibrate(20)# --- BUTTON CONTROLS ---
+
+func _on_up_button_pressed():
+	if direction != DOWN:
+		direction = UP
+		vibrate(20)
 
 
 	
