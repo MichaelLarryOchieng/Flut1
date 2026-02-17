@@ -67,6 +67,9 @@ func _on_down_button_pressed():
 		vibrate(20)
 
 
+func _on_left_button_pressed():
+
+
 
 
 	
