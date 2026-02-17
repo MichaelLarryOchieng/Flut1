@@ -60,6 +60,9 @@ func _on_up_button_pressed():
 	if direction != DOWN:
 		direction = UP
 		vibrate(20)# 
+if direction != RIGHT:
+		direction = LEFT
+		vibrate(20)
 
 func _on_down_button_pressed():
 	if direction != UP:
