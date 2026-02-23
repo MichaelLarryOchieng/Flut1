@@ -78,6 +78,10 @@ func _on_right_button_pressed():
 if direction != LEFT:
 		direction = RIGHT
 		vibrate(20)
+func _on_right_button_pressed():
+if direction != LEFT:
+		direction = RIGHT
+		vibrate(20)
 
 
 
