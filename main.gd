@@ -22,6 +22,10 @@ var touch_start := Vector2.ZERO
 var touch_end := Vector2.ZERO
 var min_swipe_distance := 30
 
+#combo
+var shake_strength := 0.0
+var shake_decay := 8.0
+
 
 func _ready():
 	start_game()
