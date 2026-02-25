@@ -69,6 +69,9 @@ if shake_strength > 0:
 else:
 	position = Vector2.ZERO
 
+if combo_count >= 5:
+	shake_strength = 8.0
+
 func handle_input():
 	if Input.is_action_pressed("ui_up") and direction != DOWN:
 		direction = UP
