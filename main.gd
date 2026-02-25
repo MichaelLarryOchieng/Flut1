@@ -59,6 +59,16 @@ func _process(delta):
 		move_snake()
 		queue_redraw()
 
+# Screen shake effect
+if shake_strength > 0:
+	shake_strength = lerp(shake_strength, 0.0, shake_decay * delta)
+	position = Vector2(
+		randf_range(-shake_strength, shake_strength),
+		randf_range(-shake_strength, shake_strength)
+	)
+else:
+	position = Vector2.ZERO
+
 func handle_input():
 	if Input.is_action_pressed("ui_up") and direction != DOWN:
 		direction = UP
