@@ -49,7 +49,7 @@ func move_snake():
 	# Move snake
 	snake.insert(0, new_head)
 
-	# ✅ FOOD EATEN BLOCK (this is what you were missing)
+
 	if new_head == food:
 		spawn_food()
 		vibrate(40)
