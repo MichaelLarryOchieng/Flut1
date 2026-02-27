@@ -1,3 +1,5 @@
+extends Node2D
+
 const GRID_SIZE := 20
 const WIDTH := 32
 const HEIGHT := 24
@@ -20,48 +22,61 @@ func start_game():
 	snake.clear()
 	snake.append(Vector2(10, 12))
 	snake.append(Vector2(9, 12))
-    snake.append(Vector2(8, 12))
+	snake.append(Vector2(8, 12))
 	direction = RIGHT
 	spawn_food()
 
 func _process(delta):
 	move_timer += delta
-if move_timer >= move_delay:
+	if move_timer >= move_delay:
 		move_timer = 0
 		move_snake()
 		queue_redraw()
 
 func move_snake():
 	var new_head = snake[0] + direction
-if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIGHT:
-start_game()
-		return
 
-if new_head in snake:
+	# Wall collision
+	if new_head.x < 0 or new_head.y < 0 or new_head.x >= WIDTH or new_head.y >= HEIGHT:
 		start_game()
 		return
+
+	# Self collision
+	if new_head in snake:
+		start_game()
+		return
+
+	# Move snake
+	snake.insert(0, new_head)
+
+	# ✅ FOOD EATEN BLOCK (this is what you were missing)
+	if new_head == food:
+		spawn_food()
+		vibrate(40)
+	else:
+		snake.pop_back()
 
 func spawn_food():
 	while true:
 		food = Vector2(randi() % WIDTH, randi() % HEIGHT)
-if food not in snake:
+		if food not in snake:
 			break
+
 func _draw():
 	for part in snake:
 		draw_rect(Rect2(part * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.GREEN)
-draw_rect(Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.RED)
+
+	draw_rect(Rect2(food * GRID_SIZE, Vector2(GRID_SIZE, GRID_SIZE)), Color.RED)
 
 func vibrate(ms := 30):
 	if OS.has_feature("mobile"):
 		Input.vibrate_handheld(ms)
+
 # --- BUTTON CONTROLS ---
 
 func _on_up_button_pressed():
 	if direction != DOWN:
 		direction = UP
-		vibrate(20)# 
-if direction != RIGHT:
-		direction = LEFT
 		vibrate(20)
 
 func _on_down_button_pressed():
@@ -69,17 +84,13 @@ func _on_down_button_pressed():
 		direction = DOWN
 		vibrate(20)
 
-
 func _on_left_button_pressed():
-if direction != RIGHT:
+	if direction != RIGHT:
 		direction = LEFT
 		vibrate(20)
+
 func _on_right_button_pressed():
-if direction != LEFT:
-		direction = RIGHT
-		vibrate(20)
-func _on_right_button_pressed():
-if direction != LEFT:
+	if direction != LEFT:
 		direction = RIGHT
 		vibrate(20)
 
