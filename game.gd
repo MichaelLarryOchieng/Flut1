@@ -102,6 +102,8 @@ if combo_count >= 5:
 	Engine.time_scale = 1.0
 
 var snake_color := Color.GREEN
+Color.GREEN
+snake_color
 
 
 
