@@ -101,6 +101,8 @@ if combo_count >= 5:
 	await get_tree().create_timer(0.25).timeout
 	Engine.time_scale = 1.0
 
+var snake_color := Color.GREEN
+
 
 
 
