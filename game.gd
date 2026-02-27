@@ -104,6 +104,12 @@ if combo_count >= 5:
 var snake_color := Color.GREEN
 Color.GREEN
 snake_color
+if combo_count >= 5:
+	snake_color = Color.GOLD
+elif combo_count >= 3:
+	snake_color = Color.ORANGE
+else:
+	snake_color = Color.GREEN
 
 
 
