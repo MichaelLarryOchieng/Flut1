@@ -96,6 +96,13 @@ func _on_right_button_pressed():
 
 
 
+if combo_count >= 5:
+	Engine.time_scale = 0.6
+	await get_tree().create_timer(0.25).timeout
+	Engine.time_scale = 1.0
+
+
+
 
 	
 	
