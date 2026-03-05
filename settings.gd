@@ -7,5 +7,6 @@ func vibrate(ms := 30):
 
 func _on_vibration_toggle_toggled(pressed: bool):
 	Settings.vibration_enabled = pressed
+# Will be deleted
 
 
