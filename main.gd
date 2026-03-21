@@ -1,3 +1,6 @@
+#To be deleted
+extends Node2D
+
 extends Node2D
 
 # Grid settings
