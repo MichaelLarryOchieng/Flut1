@@ -1,6 +1,6 @@
 
 
-# func vibrate(ms := 30):
+
 extends Node
 
 var vibration_enabled := true
