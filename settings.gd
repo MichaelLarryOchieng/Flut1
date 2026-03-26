@@ -16,4 +16,7 @@ Input.vibrate_handheld(ms)
 
 func _on_vibration_toggle_toggled(pressed: bool):
 
+var notification_enabled := true
+func notify(ms := 20):
+
 
