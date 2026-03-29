@@ -1,5 +1,4 @@
 
-const WIDTH := 32
 const HEIGHT := 24
 
 extends Node2D
