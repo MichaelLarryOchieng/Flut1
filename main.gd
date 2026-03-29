@@ -1,6 +1,3 @@
-
-const HEIGHT := 24
-
 extends Node2D
 
 # Grid settings
