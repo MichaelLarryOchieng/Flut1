@@ -1,4 +1,4 @@
-#To be deleted
+
 extends Node2D
 # Grid settings
 const GRID_SIZE := 20
