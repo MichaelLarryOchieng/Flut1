@@ -6,6 +6,7 @@ const WIDTH := 32
 const HEIGHT := 24
 
 #Directions
+const UP := Vector2(0, -1)
 
 
 # Directions
