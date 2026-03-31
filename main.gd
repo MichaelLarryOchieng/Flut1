@@ -5,6 +5,9 @@ const GRID_SIZE := 20
 const WIDTH := 32
 const HEIGHT := 24
 
+#Directions
+
+
 # Directions
 const UP := Vector2(0, -1)
 const DOWN := Vector2(0, 1)
