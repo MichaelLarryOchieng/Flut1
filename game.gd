@@ -110,8 +110,8 @@ elif combo_count >= 3:
 	snake_color = Color.ORANGE
 else:
 	snake_color = Color.GREEN
-# Snake color change
 
+# Snake color change
 var snake_color: Color = Color.GREEN
 
 
