@@ -114,6 +114,7 @@ else:
 # Snake color change
 var snake_color: Color = Color.GREEN
 var segments: Array = []
+@onready var head = $Head
 
 
 
