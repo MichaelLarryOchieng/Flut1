@@ -117,8 +117,6 @@ else:
 #@onready var head = $Head
 #@onready var head = $Head
 
-# To be deleted
-var snake_color: Color.BLACK
 
 
 
