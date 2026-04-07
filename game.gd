@@ -121,7 +121,7 @@ else:
 var snake_color: Color.BLACK
 var segments: Array = []
 @onready var head = $Head
-@onready var head = $Head
+
 
 
 
