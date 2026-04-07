@@ -119,7 +119,6 @@ else:
 
 # To be deleted
 var snake_color: Color.BLACK
-var segments: Array = []
 
 
 
